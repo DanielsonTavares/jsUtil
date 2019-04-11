@@ -1,9 +1,26 @@
-// Função para apresentar o conteúdo de uma lista de forma amigável.
-function displayArrayObjects(arrayObjects) {
+/* Função para apresentar o conteúdo de uma lista de forma amigável.
+   arrayObjects: Lista contendo os itens.
+   colunas: Número de colunas a serem apresentadas
+   Ex.: 
+   arrayObjects = 
+   [   "teste a"
+    ,  "teste b"
+	  ,  "teste c"
+	  ,  "teste d"
+	  ,  "teste e"
+	  ,  "teste f"
+	  ,  "teste g"
+	  ,  "teste h"
+	  ,  "teste i"
+	  ,  "teste j"];
+    
+   colunas = 3
+*/
+function displayArrayObjects(arrayObjects, colunas) {
   var
      len = arrayObjects.length,
      text = '',
-     colunas = 10,
+     //colunas = 3,
      i = 0;
 
   for (i = 0; i < len; i++) {
