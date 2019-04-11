@@ -42,6 +42,15 @@ function horas() {
 /* fnFmtParametros(<str>)
    Monta uma string formatada para ser utilizada no insert,
    apartir de parâmetros de uma procedure/function Oracle.
+   
+   Formato a ser passado no parametro <str>:
+     pscdfun char,
+     pscdpat char,
+     psnrisc char,
+     psnrpla char,
+     psdtmesref char,
+     pddtpvtpag date,
+     prsErro out varchar2;
 
    Parâmetros: <str> String a ser formatada.
    Retorno:
