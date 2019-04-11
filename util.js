@@ -101,3 +101,41 @@ function fnFmtParametros( str ) {
   //obj.value = sString;
   return sString;
 }
+
+/* Substituir acentuação pelo código equivalente em html */
+function fnSubstiuiAcentos(str){
+	var i=0;
+	var strLocal = '';
+	var listaAcentos = {
+			0: ['á','&aacute;'],
+	                1: ['A','&Aacute;'],
+	                2: ['é','&eacute;'],
+			3: ['É','&Eacute;'],
+			4: ['í','&iacute;'],
+			5: ['Í','&Iacute;'],
+			6: ['ó','&oacute;'],
+			7: ['Ó','&Oacute;'],
+			8: ['ú','&ucute;'],
+			9: ['Ú','&Ucute;'],
+			10: ['â','&acirc;'],
+			11: ['Â','&Acirc;'],
+			12: ['ê','&ecirc;'],
+			13: ['Ê','&Ecirc;'],
+			14: ['ô','&ocirc;'],
+			15: ['Ô','&Ocirc;'],
+			16: ['ã','&atilde;'],
+			17: ['Ã','&Atilde;'],
+			18: ['õ','&otilde;'],
+			19: ['Õ','&Otilde;']
+			};
+
+	strLocal = str.trim();
+	
+	var acento = '';
+	for(i = 0; i in listaAcentos; i++){
+		acento = listaAcentos[i];
+		strLocal = strLocal.replace(acento[0], acento[1]);
+	}
+
+	return strLocal;
+}
